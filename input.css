@@ -8,26 +8,28 @@ body {
 .input {
     position: relative;
 }
+
 .input_field {
     padding: 10px;
     border: none;
     border-radius: 4px;
     background-color: transparent;
     outline: 2px solid #fff;
+    color: #fff;
 }
 
 .input_label {
     color: #fff;
     position: absolute;
-    top: 0;
-    left: 0;
-    transform: translate(10px, 10px);
+    top: 10px;
+    left: 10px;
+    transform: translate(0, 0);
     transform-origin: left;
-    transition: 0.25s;
+    transition: transform 0.25s ease-in-out;
 }
 
-.input_field:focus-visible ~ .input_label,
-.input_field:valid ~ .input_field{
+.input_field:focus-visible~.input_label,
+.input_field:valid~.input_label {
     transform: translate(0, -30px) scale(0.8);
     color: #d1c5fc;
 }
@@ -37,10 +39,9 @@ body {
 }
 
 .input_icon-wrapper {
-    position: relative;
-    top: 50%;
-    right: 12px;
-    transform: translate(-50%);
+    position: absolute;
+    top: 15%;
+    right: 3px;
     cursor: pointer;
 }
 
